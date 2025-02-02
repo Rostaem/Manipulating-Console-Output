@@ -1,20 +1,35 @@
 #include <iostream>
+#include <iomanip>
+#include <string>
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+using namespace std;
+
 int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the
-    // <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
+    int id1 = 1, id2 = 2, id3 = 3;
+    string name1 = "Alice", name2 = "Bob", name3 = "Charlie";
+    double balance1 = 1000.00, balance2 = 530.25, balance3 = 2040.50;
 
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code.
-        // We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/>
-        // breakpoint for you, but you can always add more by pressing
-        // <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
-    }
+    // displaying the title for the report and center it using setw()
+    cout << setw(30) << "Daily Report" << endl;
+
+    // displaying column headers
+    cout << left << setw(10) << "ID" << setw(15) << "Name" << right << setw(10) << "Balance" << endl;
+    cout << "--------------------------------------------------" << endl;
+
+    // displaying first row
+    cout << setfill('0') << setw(5) << id1 << setfill(' ') << "  ";  // ID formatted as five-digit with leading zeros
+    cout << left << setw(15) << name1;  // Left-aligned name
+    cout << right << "$" << fixed << setprecision(2) << setw(9) << balance1 << endl;  // Right-aligned balance with two decimal places
+
+    // displayign second row
+    cout << setfill('0') << setw(5) << id2 << setfill(' ') << "  ";
+    cout << left << setw(15) << name2;
+    cout << right << "$" << fixed << setprecision(2) << setw(9) << balance2 << endl;
+
+    // Display third row
+    cout << setfill('0') << setw(5) << id3 << setfill(' ') << "  ";
+    cout << left << setw(15) << name3;
+    cout << right << "$" << fixed << setprecision(2) << setw(9) << balance3 << endl;
 
     return 0;
 }
