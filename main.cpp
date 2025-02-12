@@ -10,11 +10,11 @@ int main() {
     double balance1 = 1000.00, balance2 = 530.25, balance3 = 2040.50;
 
     // displaying the title for the report and center it using setw()
-    cout << setw(30) << "Daily Report" << endl;
+    cout << setw(25) << "Daily Report" << endl;
 
     // displaying column headers
     cout << left << setw(10) << "ID" << setw(15) << "Name" << right << setw(10) << "Balance" << endl;
-    cout << "--------------------------------------------------" << endl;
+    cout << "----------------------------------------------" << endl;
 
     // displaying first row
     cout << setfill('0') << setw(5) << id1 << setfill(' ') << "  ";  // ID formatted as five-digit with leading zeros
